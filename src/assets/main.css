@@ -1,13 +1,8 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --color-blue: #4285f4;
-}
-@theme {
-  --default-font-family: 'Open Sans', var(--font-sans);
-
-  --color-brand-gray-1: #dadce0;
-  --color-brand-blue-1: #1967d2;
-  --color-brand-green-1: #137333;
-  --tailwind-box-shadow-blue: 0 0 3px 3px var(--color-blue);
-}
+/*
+  All your custom CSS, including the custom variables and classes you want to make,
+  can go here below the @tailwind directives.
+*/
