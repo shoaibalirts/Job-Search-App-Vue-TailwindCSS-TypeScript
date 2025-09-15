@@ -6,19 +6,21 @@
 <script>
 export default {
   name: 'ActionButton',
-  props: {
-    loginText: String,
-    primaryButton: Boolean,
-  },
-  data() {
-    return {
-      primary: true,
-    }
-  },
+  props: ['loginText', 'isPrimary'],
+  // props: {
+  //   loginText: String,
+  //   isPrimary: Boolean,
+  // },
+  // data() {
+  //   return {
+  //     primary: this.isPrimary,
+  //   }
+  // },
   computed: {
     buttonClass() {
       return {
-        primary: this.primary,
+        primary: this.isPrimary,
+        secondary: !this.isPrimary,
       }
     },
   },
@@ -33,7 +35,9 @@ button {
 .primary {
   @apply bg-brand-blue-1 hover:shadow-blue border-0 text-white;
 }
-
+.secondary {
+  @apply text-brand-blue-1 hover:bg-brand-blue-2 border-0 bg-transparent hover:text-white;
+}
 .secondary {
 }
 </style>
