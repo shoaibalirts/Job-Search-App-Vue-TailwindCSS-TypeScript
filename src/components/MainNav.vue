@@ -15,6 +15,7 @@
           <action-button v-else @click="loginUser" :login-text="loginText" type="primary" />
         </div>
       </div>
+      <the-subnav v-if="isLoggedIn" />
     </div>
   </header>
 </template>
@@ -22,11 +23,13 @@
 <script>
 import ActionButton from './ActionButton.vue'
 import ProfileImage from './ProfileImage.vue'
+import TheSubnav from './TheSubnav.vue'
 export default {
   name: 'MainNav',
   components: {
     ActionButton,
     ProfileImage,
+    TheSubnav,
   },
   data() {
     return {
@@ -35,7 +38,6 @@ export default {
       menuItems: ['Teams', 'Location', 'Life at PBA Corp', 'Students', 'Jobs'],
       isLoggedIn: false,
       loginText: 'Sign in',
-      // type: 'primary',
     }
   },
   methods: {
