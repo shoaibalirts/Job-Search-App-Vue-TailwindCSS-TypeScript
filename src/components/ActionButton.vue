@@ -6,16 +6,10 @@
 <script>
 export default {
   name: 'ActionButton',
-  props: ['loginText', 'type'],
-  // props: {
-  //   loginText: String,
-  //   isPrimary: Boolean,
-  // },
-  // data() {
-  //   return {
-  //     primary: this.isPrimary,
-  //   }
-  // },
+  props: {
+    loginText: String,
+    type: String,
+  },
   computed: {
     buttonClass() {
       return {
@@ -37,7 +31,5 @@ button {
 }
 .secondary {
   @apply border-0 bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white;
-}
-.secondary {
 }
 </style>
