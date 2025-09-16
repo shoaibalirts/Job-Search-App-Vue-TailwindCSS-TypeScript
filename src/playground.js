@@ -28,3 +28,20 @@ console.log('----------------Map method--------------')
 const numbers = [1, 2, 3, 4, 5]
 const square = numbers.map((number) => number * number)
 console.log(square)
+
+console.log('----------------Dynamic Object Keys--------------')
+// Use dynamic object keys when the property name needs to be set dynamically at runtime.
+
+const favoriteFood = 'sushi'
+const goodFoods = {
+  [favoriteFood]: true,
+}
+console.log(goodFoods)
+
+const field = 'email'
+const user = { [field]: 'shoaibali.rts@gmail.com' }
+console.log(user)
+
+const id = 123
+const lookup = { [id]: 'Record for 123' }
+console.log(lookup)

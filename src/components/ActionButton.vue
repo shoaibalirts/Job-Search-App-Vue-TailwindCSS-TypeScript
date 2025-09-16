@@ -7,14 +7,25 @@
 export default {
   name: 'ActionButton',
   props: {
-    loginText: String,
-    type: String,
+    loginText: {
+      type: String,
+      required: true,
+    },
+    type: {
+      type: String,
+      required: false,
+      default: 'primary',
+      validator(value) {
+        return ['primary', 'secondary'].includes(value)
+      },
+    },
   },
   computed: {
     buttonClass() {
       return {
-        primary: this.type === 'primary',
-        secondary: this.type === 'secondary',
+        // primary: this.type === 'primary',
+        // secondary: this.type === 'secondary',
+        [this.type]: true, // Dynamic class binding using computed property
       }
     },
   },
