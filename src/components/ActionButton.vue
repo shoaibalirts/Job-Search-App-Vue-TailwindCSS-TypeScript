@@ -6,7 +6,7 @@
 <script>
 export default {
   name: 'ActionButton',
-  props: ['loginText', 'isPrimary'],
+  props: ['loginText', 'type'],
   // props: {
   //   loginText: String,
   //   isPrimary: Boolean,
@@ -19,8 +19,8 @@ export default {
   computed: {
     buttonClass() {
       return {
-        primary: this.isPrimary,
-        secondary: !this.isPrimary,
+        primary: this.type === 'primary',
+        secondary: this.type === 'secondary',
       }
     },
   },
@@ -33,10 +33,10 @@ button {
   @apply rounded px-5 py-3 font-medium;
 }
 .primary {
-  @apply bg-brand-blue-1 hover:shadow-blue border-0 text-white;
+  @apply border-0 bg-brand-blue-1 text-white hover:shadow-blue;
 }
 .secondary {
-  @apply text-brand-blue-1 hover:bg-brand-blue-2 border-0 bg-transparent hover:text-white;
+  @apply border-0 bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white;
 }
 .secondary {
 }
