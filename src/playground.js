@@ -45,3 +45,22 @@ console.log(user)
 const id = 123
 const lookup = { [id]: 'Record for 123' }
 console.log(lookup)
+
+console.log('---------setTimeout, setInterval, and clearInterval functions---------------')
+
+// setTimeout(() => {
+//   console.log('wait for 2 seconds and then execute this callback function')
+// }, 2000)
+
+// setInterval(() => {
+//   console.log('Execute this callback after every 2 seconds')
+// }, 2000)
+// console.log('hello interval')
+
+const interval = setInterval(() => {
+  console.log('Execute this callback after every 2 seconds') // 2+2+2+2
+}, 2000)
+
+setTimeout(() => {
+  clearInterval(interval)
+}, 10000)
