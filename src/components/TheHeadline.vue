@@ -1,10 +1,10 @@
 <template>
-  <h1>
+  <h1 class="mb-14 text-8xl font-bold tracking-tighter">
     <span :class="actionClasses">{{ action }}</span
     ><br />
     for everyone
   </h1>
-  <h2>Find your next job at PBA Corp.</h2>
+  <h2 class="text-3xl font-light">Find your next job at PBA Corp.</h2>
 </template>
 
 <script>
@@ -19,10 +19,11 @@ export default {
   computed: {
     actionClasses() {
       return {
-        build: this.action === 'Build',
-        create: this.action === 'Create',
-        design: this.action === 'Design',
-        code: this.action === 'Code',
+        // build: this.action === 'Build',
+        // create: this.action === 'Create',
+        // design: this.action === 'Design',
+        // code: this.action === 'Code',
+        [this.action.toLocaleLowerCase()]: true,
       }
     },
   },
